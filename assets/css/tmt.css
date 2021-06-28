@@ -1016,6 +1016,7 @@ padding: 10px;
 .gallerys{
     display: table;
     padding-bottom: 20px;
+    padding-left: 20px;
 }
 .homesubone,
 .gallerys {

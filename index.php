@@ -129,7 +129,8 @@ if (isset($_POST ['SAVED'])){
                                 <center>
                                     
                                 <a href="#" class="button button--flex">
-                                    <div class="send">Make an Inquiry</div>
+                                <input type="submit" name = "SAVE"  value = "INSERT" />
+                                   
                                 </a>
                             </center>
                             </div>

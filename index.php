@@ -123,14 +123,15 @@ if (isset($_POST ['SAVED'])){
                                 <div class="contact__content">
                                     <label for="" class="contact_label">What service do you need</label>
                                     <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                    
                                 </div>
+                                <input type="submit" name = "SAVE"  value = "INSERT" />
                             </div>
                             <div class="subthreebutton">
                                 <center>
                                     
                                 <a href="#" class="button button--flex">
-                                <input type="submit" name = "SAVE"  value = "INSERT" />
-                                   
+                                    <div class="send">Make an Inquiry</div>
                                 </a>
                             </center>
                             </div>

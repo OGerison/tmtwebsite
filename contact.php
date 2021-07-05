@@ -1,6 +1,39 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
+            <?PHP
+include 'db.php';
+$host = "localhost";
+$user ="root"; 
+$password = "";
+$database = "tmtwebsite";
+if (isset($_POST ['SAVE'])){
+	echo "<br>";	
+	$names = $_POST['name'];
+	$emails = $_POST['email'];
+    $subjects = $_POST['subject'];
+	$descriptions = $_POST['description'];
+	
+	$sql = "insert into contact(NAME,EMAIL,SUBJECT,DESCRIPTION)values('$names',$emails','$subjects','$descriptions')";
+	if ($connection -> query($sql)){
+		echo"Inquiry sent successfully.";
+	}
+else		{
+	echo "Error is here." .$connection ->error;
+	}
+}
+
+if (isset($_POST ['SAVED'])){
+	$sql = "select * from contact";
+	$myquery = $connection->query($sql);
+	$result = $myquery->fetch_assoc();
+	while($result = $myquery->fetch_assoc()){
+		echo "<br>";
+		print $result['NAME']."".$result['EMAIL']."".$result['SERVICE'].""$result['DESCRIPTION'];
+		echo"<br>";
+	}
+}
+?>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -86,7 +119,7 @@
                             </div>
                         </div>                      
                     </div> 
-                    <form action="" class="contact__form grid">
+                    <form action="contact.php" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact_label">Name*</label>
@@ -111,6 +144,7 @@
                                 <div class="send">Send Message</div>
                             </a>
                         </div>
+                        <input type="submit" name = "SAVE"  value = "INSERT" />
                     </form>
                 </div>
 

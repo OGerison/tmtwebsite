@@ -1,6 +1,39 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
+<?PHP
+include 'db.php';
+$host = "localhost";
+$user ="root"; 
+$password = "";
+$database = "tmtwebsite";
+if (isset($_POST ['SAVE'])){
+	echo "<br>";	
+	$emails = $_POST['email'];
+	$services = $_POST['service'];
+
+	
+	$sql = "insert into inquiries(EMAIL,SERVICE)values('$emails','$services')";
+	if ($connection -> query($sql)){
+		echo"Inquiry sent successfully.";
+	}
+else		{
+	echo "Error is here." .$connection ->error;
+	}
+}
+
+if (isset($_POST ['SAVED'])){
+	$sql = "select * from inquiries";
+	$myquery = $connection->query($sql);
+	$result = $myquery->fetch_assoc();
+	while($result = $myquery->fetch_assoc()){
+		echo "<br>";
+		print $result['EMAIL']."".$result['SERVICE'];
+		echo"<br>";
+	}
+}
+?>
+
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -81,7 +114,7 @@
                             we'll get back to you <span style="color: #33ccff;">ASAP</span>
                         </div>
                         <br>
-                        <form action="" class="contact__form grid">
+                        <form action="index.php" class="contact__form grid">
                             <div class="contact__inputs grid">
                                 <div class="contact__content">
                                     <label for="" class="contact_label">Email*</label>

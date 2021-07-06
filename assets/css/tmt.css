@@ -1161,6 +1161,28 @@ main{
         width: 200px;
         height: 200px;
     }
+    .nav__menu,
+    .about__img,
+    .top__nav{
+        display: none;
+    }
+    .footer__img{
+        width: 300px;
+        height: 100px;
+    }
+    .hometitle{
+        font-size: 30px;
+    }
+    .home__social{
+        font-size: 12.5px;
+    }
+    .hometitle{
+        font-size: 15px;
+    }
+    .vl{
+        height:150px;
+    }
+
 }
 
 /* For medium devices */

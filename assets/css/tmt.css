@@ -538,7 +538,7 @@ img{
   width: 50%;
 }
 .footer__link{
-    color: yellow;
+    color: gray;
 }
 .footer__social{
     color: gray;
@@ -1141,8 +1141,47 @@ main{
     .nav__list{
         column-gap: 0;
     }
-    .footer__title:hover{
-        color: green;
+    .homesubone__img{
+        display: none;
+    }
+    .contained {
+        text-align: center;
+        padding: 10px 20px;
+        display: inline-block;
+        margin: auto;
+        position: relative;
+        padding-right: 300px;
+    }
+    .contained-item {
+        font-size: 0.7em;
+        display: inline-block;
+        padding: 10px 10px;
+    }
+    .sttitle{
+        text-align: center;
+    }
+    .indexabout{
+        background-color: lightblue;
+        height:160px;
+        width:260px;
+        border-radius: .25rem;
+        padding-left: 20px;
+        text-align: center;
+    }
+    .talkers{
+        margin: auto;
+        display: flex;
+        position: relative;
+        padding-right: 50px;
+    }
+    .homesubone{
+        font-size: 40px;
+    }
+    .footer__link{
+        cursor: pointer;
+    }
+    .footer__link:hover{
+        color: yellow;
     }
     .skills__title{
         font-size: var(--normal-font-size);

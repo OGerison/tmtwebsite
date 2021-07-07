@@ -1073,20 +1073,20 @@ main{
     padding-right:15px;
     justify-content: space-between;
 }
-#st-box {
+.st-box {
     float:left;
     width:180px;
     height:160px;
     background-color:white;
 }
-#gd-box {
+.gd-box {
     float:left;
     width:180px;
     height:160px;
     background-color:white;
     margin-left:20px;
 }
-#rd-box {
+.rd-box {
     float:right;
     width:180px;
     height:160px;
@@ -1418,6 +1418,7 @@ main{
     }
     .contact__form{
         width: 460px;
+        padding-right: 170px;
     }
     .contact__inputs{
         grid-template-columns: repeat(2, 1fr);

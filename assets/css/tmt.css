@@ -1141,6 +1141,9 @@ main{
     .nav__list{
         column-gap: 0;
     }
+    .footer__title:hover{
+        color: green;
+    }
     .skills__title{
         font-size: var(--normal-font-size);
     }
@@ -1182,9 +1185,25 @@ main{
     .vl{
         height:150px;
     }
-
+    .contact__form{
+        width:300px;
+    }
+    .services__container{
+        grid-template-columns: max-content;
+        justify-content: center;
+    }
+    .services__content{
+        padding-right: 3.5rem;
+        height:300px;
+        width:300px;
+    }
+    .services__modal{
+        padding: 0 .5rem;
+    }
+    .homesocial{
+        font-size: 5px;
+    }
 }
-
 /* For medium devices */
 @media screen and (min-width: 568px){
     .home__content{

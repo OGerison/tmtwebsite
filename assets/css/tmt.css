@@ -1203,10 +1203,17 @@ main{
         width: 200px;
         height: 200px;
     }
-    .nav__menu,
-    .about__img,
+    
+    .about__img{
+        width: 100px;
+        height: 45px;
+        float: left;
+    }
+    .nav__close{
+        color: black;
+    }
     .top__nav{
-        display: none;
+    display: none;
     }
     .footer__img{
         width: 300px;
@@ -1216,7 +1223,10 @@ main{
         font-size: 30px;
     }
     .home__social{
-        font-size: 12.5px;
+        font-size: 13px;
+    }
+    .br__bg{
+        display: none;
     }
     .hometitle{
         font-size: 15px;
@@ -1241,6 +1251,13 @@ main{
     }
     .homesocial{
         font-size: 5px;
+    }
+    .flex-child{
+        display: none;
+    }
+    .years{
+        text-align: center;
+        padding-left: 100px;
     }
 }
 /* For medium devices */

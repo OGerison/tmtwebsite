@@ -1072,21 +1072,23 @@ main{
     padding-left:15px;
     padding-right:15px;
     justify-content: space-between;
+    display: flex;
+    flex-direction: row;
 }
-.st-box {
+#st-box {
     float:left;
     width:180px;
     height:160px;
     background-color:white;
 }
-.gd-box {
+#gd-box {
     float:left;
     width:180px;
     height:160px;
     background-color:white;
     margin-left:20px;
 }
-.rd-box {
+#rd-box {
     float:right;
     width:180px;
     height:160px;
@@ -1141,8 +1143,21 @@ main{
     .nav__list{
         column-gap: 0;
     }
-    .homesubone__img{
+    .homemaintwo{
+        padding-right: 20px;
+    }
+    .homesubone__img,
+    .indexlast{
         display: none;
+    }
+    .brief__bg{
+        display: none;
+    }
+    .secondindex{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 100px;
     }
     .contained {
         text-align: center;
@@ -1225,8 +1240,20 @@ main{
     .home__social{
         font-size: 13px;
     }
-    .br__bg{
-        display: none;
+    .about__info{
+        display: flex;
+        flex-direction: column;
+    }
+    .finishedprojects{
+        text-align: center;
+    }
+    .skilledexperts{
+        text-align: center;
+        padding-left: 40px;
+    }
+    .happyclients{
+        text-align: center;
+        padding-left: 20px;
     }
     .hometitle{
         font-size: 15px;
@@ -1252,12 +1279,16 @@ main{
     .homesocial{
         font-size: 5px;
     }
-    .flex-child{
-        display: none;
-    }
     .years{
         text-align: center;
         padding-left: 100px;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .alt__bg{
+        display: none;
     }
 }
 /* For medium devices */
@@ -1424,4 +1455,8 @@ main{
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
+}
+.footed__container{
+    display: flex;
+    flex-direction: row;
 }

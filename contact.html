@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
+
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link active-link">
+                            <a href="index.phpl" class="nav__link active-link">
                                 <i class=""></i>Home
                             </a>
                         </li>
@@ -41,7 +42,7 @@
                         </li>
 
                          <li class="nav__item">
-                            <a href="contact.html" class="nav__link">
+                            <a href="contact.php" class="nav__link">
                                 <i class=""></i>Contact Us
                             </a>
                         </li>
@@ -53,12 +54,6 @@
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
-                </div>
-                <div class="top__nav">
-                    <form class="example" action="">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                      </form>
                 </div>
             </nav>
         </div>
@@ -78,6 +73,7 @@
                                 <h1 class="hometitle">To make requests for 
                                     <br>
                                     further information,
+                                    <br>
                                     <span style="color: #33ccff">contact us
                                         <br>
                                     </span>
@@ -95,7 +91,7 @@
                             </div>
                         </div>                      
                     </div> 
-                    <form action="" class="contact__form grid">
+                    <form action="contact.php" method="POST" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact_label">Name*</label>
@@ -116,9 +112,9 @@
                         </div>
 
                         <div>
-                            <a href="#" class="button button--flex">
-                                <div class="send">Send Message</div>
-                            </a>
+                        <center>
+                            <input style="color:yellow ; background-color:hsl(121, 43%, 51%); padding:5%; border-radius:20%" type="submit" name = "SAVE"  value = "Send Message" />
+                            </center>
                         </div>
                     </form>
                 </div>
@@ -127,12 +123,15 @@
             <!---another section-->
             <section class="contact section" id="contact">
                 <div class="contact__bg">
-                    <div class="footer__container container grid">
+                    <div class="footeree__container container grid">
                         <div>
                             <h1 class="contact__title">Our Location</h1>
                             <br>
                             <span class="footer__subtitle">
-                                Plot 30 Soliz Courts, Lumumba Avenue - Nakasero                            
+                                Plot 30 Soliz Courts, 
+                                <br>
+                                Lumumba Avenue - Nakasero  
+                                <br>                          
                                 Kampala, Uganda
                                 <br>
                             </span>
@@ -179,7 +178,7 @@
                     </div>
                 </div>
                 <div class="brief__bg">
-                    <div class="footer__container container grid">
+                    <div class="footers__container container grid">
                         <div class="home section" id="home">
                             <div class="home__container container grid">
                                 <div class="home__content grid">
@@ -262,13 +261,13 @@
                         <div class="footer__socials">
                             <h1 class="footer__title">Quick Links</h1>
                             <br>
-                            <a href="index.html" class="footer__link">Home</a>
+                            <a href="index.phpl" class="footer__link">Home</a>
                             <br>
                             <a href="about.html" class="footer__link ">About Us</a>
                             <br>
                             <a href="services.html" class="footer__link ">Our Services</a>
                             <br>
-                            <a href="contact.html" class="footer__link ">Contact Us</a>
+                            <a href="contact.php" class="footer__link ">Contact Us</a>
                         </div>
                     </div>
                     <hr>

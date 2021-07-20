@@ -57,7 +57,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
                         <li class="nav__item">
-                            <a href="index.phpl" class="nav__link active-link">
+                            <a href="index.php" class="nav__link active-link">
                                 <i class=""></i>Home
                             </a>
                         </li>

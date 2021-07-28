@@ -1,40 +1,34 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-        <?PHP
-            include 'db.php';
-            $host = "localhost";
-            $user ="root"; 
-            $password = "";
-            $database = "tmtwebsite";
-            if (isset($_POST ['SAVE'])){
-                echo "<br>";	
-                $names = $_POST['name'];
-                $emails = $_POST['email'];
-                $subjects = $_POST['subject'];
-                $descriptions = $_POST['description'];
-                
-                $sql = "insert into contact(NAME,EMAIL,SUBJECT,DESCRIPTION)values('$names',$emails','$subjects','$descriptions')";
-                if ($connection -> query($sql)){
-                    echo"Inquiry sent successfully.";
-                }
-            else		{
-                echo "Error is here." .$connection ->error;
-                }
-            }
-            
-            if (isset($_POST ['SAVED'])){
-                $sql = "select * from contact";
-                $myquery = $connection->query($sql);
-                $result = $myquery->fetch_assoc();
-                while($result = $myquery->fetch_assoc()){
-                    echo "<br>";
-                    print $result['NAME']."".$result['EMAIL']."".$result['SERVICE']."".$result['DESCRIPTION'];
-                    echo"<br>";
-                }
-            }
-            ?>
+        <?php
+ 
+ // servername => localhost
+ // username => root
+ // password => empty
+ // database name => staff
+ $conn = mysqli_connect("localhost", "root", "", "tmt");
+  
+ // Check connection
+ if($conn === false){
+     die("ERROR: Could not connect. "
+         . mysqli_connect_error());
+ }
+  
+ // Taking all 4  values from the form data(input)
+ $n_ame =  $_REQUEST['n_ame'];
+ $e_mail = $_REQUEST['e_mail'];
+ $s_ubject =  $_REQUEST['s_ubject'];
+ $d_escription = $_REQUEST['d_escription'];
+  
+ // Performing insert query execution
+ // here our table name is college
+ $sql = "INSERT INTO contact  VALUES ('$n_ame',
+     '$e_mail','$s_ubject','$d_escription')";
 
+ // Close connection
+ mysqli_close($conn);
+ ?>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -128,20 +122,20 @@
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="" class="contact_label">Name*</label>
-                                <input type="text" class="contact__input">
+                                <input name="n_ame" type="text" id="name" class="contact__input">
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact_label">Email*</label>
-                                <input type="email" class="contact__input">
+                                <input name="e_mail" type="email" id="email" class="contact__input">
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact_label">Subject*</label>
-                            <input type="text" class="contact__input">
+                            <input name="s_ubject" type="text" id="subject" class="contact__input">
                         </div>
                         <div class="contact__content">
                             <label for="" class="contact_label">Please describe what you need.</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <textarea name="d_escription" id="description" cols="0" rows="7" class="contact__input"></textarea>
                         </div>
 
                         <div>

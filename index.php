@@ -1,38 +1,43 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-        <?PHP
-include 'db.php';
-$host = "localhost";
-$user ="root"; 
-$password = "";
-$database = "tmtwebsite";
-if (isset($_POST ['SAVE'])){
-	echo "<br>";	
-	$emails = $_POST['email'];
-	$services = $_POST['service'];
+        <?php
+ 
+ // servername => localhost
+ // username => root
+ // password => empty
+ // database name => staff
+ $conn = mysqli_connect("localhost", "root", "", "tmt");
+  
+ // Check connection
+ if($conn === false){
+     die("ERROR: Could not connect. "
+         . mysqli_connect_error());
+ }
+  
+ // Taking all 5 values from the form data(input)
+ $e_mail =  $_REQUEST['e_mail'];
+ $s_ervice = $_REQUEST['s_ervice'];
+  
+ // Performing insert query execution
+ // here our table name is college
+ $sql = "INSERT INTO inquiries  VALUES ('$e_mail',
+     '$s_ervice')";
+  
+ if(mysqli_query($conn, $sql)){
+     echo "<h3>data stored in a database successfully."
+         . " Please browse your localhost php my admin"
+         . " to view the updated data</h3>";
 
-	
-	$sql = "insert into inquiries(EMAIL,SERVICE)values('$emails','$services')";
-	if ($connection -> query($sql)){
-		echo"Inquiry sent successfully.";
-	}
-else		{
-	echo "Error is here." .$connection ->error;
-	}
-}
-
-if (isset($_POST ['SAVED'])){
-	$sql = "select * from inquiries";
-	$myquery = $connection->query($sql);
-	$result = $myquery->fetch_assoc();
-	while($result = $myquery->fetch_assoc()){
-		echo "<br>";
-		print $result['EMAIL']."".$result['SERVICE'];
-		echo"<br>";
-	}
-}
-?>
+     echo nl2br("\n$e_mail\n $s_ervice\n");
+ } else{
+     echo "ERROR: Hush! Sorry $sql. "
+         . mysqli_error($conn);
+ }
+  
+ // Close connection
+ mysqli_close($conn);
+ ?>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -121,11 +126,11 @@ if (isset($_POST ['SAVED'])){
                             <div class="contact__inputs grid">
                                 <div class="contact__content">
                                     <label for="" class="contact_label">Email*</label>
-                                    <input type="email" class="contact__input">
+                                    <input type="text" name="e_mail" class="contact__input" id="emailaddress">
                                 </div>
                                 <div class="contact__content">
                                     <label for="" class="contact_label">What service do you need</label>
-                                    <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                    <textarea name="s_ervice" id="service" cols="0" rows="7" class="contact__input"></textarea>
                                     
                                 </div>
                             </div>

@@ -8,6 +8,8 @@
      die("ERROR: Could not connect. "
          . mysqli_connect_error());
  }
+  if (isset($_POST['SAVE'])) {
+      echo "<br>";
   
  $n_ame =  $_REQUEST['n_ame'];
  $e_mail = $_REQUEST['e_mail'];
@@ -17,6 +19,14 @@
  $sql = "INSERT INTO contact  VALUES ('$n_ame',
      '$e_mail','$s_ubject','$d_escription')";
 
+if(mysqli_query($conn, $sql)){
+    echo "<h3>Request sent successfully.</h3>";
+
+} else{
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
+}
+}
  mysqli_close($conn);
  ?>
             <meta charset="UTF-8">

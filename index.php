@@ -10,23 +10,23 @@
          . mysqli_connect_error());
  }
 
+ if (isset($_POST['SAVE'])) {
+    echo "<br>";
+
  $e_mail =  $_REQUEST['e_mail'];
  $s_ervice = $_REQUEST['s_ervice'];
 
  $sql = "INSERT INTO inquiries  VALUES ('$e_mail',
      '$s_ervice')";
-  
- if(mysqli_query($conn, $sql)){
-     echo "<h3>data stored in a database successfully."
-         . " Please browse your localhost php my admin"
-         . " to view the updated data</h3>";
 
-     echo nl2br("\n$e_mail\n $s_ervice\n");
- } else{
-     echo "ERROR: Hush! Sorry $sql. "
-         . mysqli_error($conn);
+if(mysqli_query($conn, $sql)){
+    echo "<h3>Inquiry sent successfully.</h3>";
+
+} else{
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
+}
  }
-
  mysqli_close($conn);
  ?>
             <meta charset="UTF-8">

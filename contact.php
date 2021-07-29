@@ -11,10 +11,10 @@
   if (isset($_POST['SAVE'])) {
       echo "<br>";
   
- $n_ame =  $_REQUEST['n_ame'];
- $e_mail = $_REQUEST['e_mail'];
- $s_ubject =  $_REQUEST['s_ubject'];
- $d_escription = $_REQUEST['d_escription'];
+ $n_ame =  $_POST['n_ame'];
+ $e_mail = $_POST['e_mail'];
+ $s_ubject =  $_POST['s_ubject'];
+ $d_escription = $_POST['d_escription'];
   
  $sql = "INSERT INTO contact  VALUES ('$n_ame',
      '$e_mail','$s_ubject','$d_escription')";

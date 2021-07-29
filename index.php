@@ -13,8 +13,8 @@
  if (isset($_POST['SAVE'])) {
     echo "<br>";
 
- $e_mail =  $_REQUEST['e_mail'];
- $s_ervice = $_REQUEST['s_ervice'];
+ $e_mail =  $_POST['e_mail'];
+ $s_ervice = $_POST['s_ervice'];
 
  $sql = "INSERT INTO inquiries  VALUES ('$e_mail',
      '$s_ervice')";

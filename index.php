@@ -103,7 +103,6 @@ if(mysqli_query($conn, $sql)){
                     <div class="homesubtwo">
                         Your number one contact for business systems
                     </div>
-
                     <div class="homesubthree">
                         <div class="homesubthrees">
                             Make a consultation below
@@ -121,8 +120,7 @@ if(mysqli_query($conn, $sql)){
                                 </div>
                                 <div class="contact__content">
                                     <label for="" class="contact_label">What service do you need</label>
-                                    <textarea name="s_ervice" id="service" cols="0" rows="7" class="contact__input"></textarea>
-                                    
+                                    <textarea name="s_ervice" id="service" cols="0" rows="2" class="contact__input"></textarea>
                                 </div>
                             </div>
                             <div class="subthreebutton">

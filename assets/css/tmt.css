@@ -1608,7 +1608,6 @@ main{
 .homesubone__img{
     width: 550px;
     height: 780px;
-
 }
 .homemainone{
     display: flex;
@@ -1623,18 +1622,20 @@ main{
     padding-right: 300px;
 }
 .tech{
-
     position: relative;
     left: 0px;
     width: 420px;
     height: 230px;
-    padding-right: 50px;
+    padding-right: 106px;
 }
 .homesubtwo{
     position: relative;
     left: 0px;
     width: 200px;
     height: 50px;
-
+}
+.contact__form{
+    padding-left: 0px;
+    float: left;
 }
 }

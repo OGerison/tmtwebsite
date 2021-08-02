@@ -91,7 +91,7 @@ if(mysqli_query($conn, $sql)){
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="homeone section" id="homeone">
-                <div class="homemainone">
+            <div class="homemainone">
                     <div class="homesubone">
                         <div class="tech">
                         We are The Managers of
